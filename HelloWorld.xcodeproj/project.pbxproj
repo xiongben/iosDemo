@@ -13,6 +13,9 @@
 		A3ACDF63270C694300D200C2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3ACDF61270C694300D200C2 /* Main.storyboard */; };
 		A3ACDF65270C694500D200C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3ACDF64270C694500D200C2 /* Assets.xcassets */; };
 		A3ACDF68270C694500D200C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3ACDF66270C694500D200C2 /* LaunchScreen.storyboard */; };
+		A3ACDF70270C933300D200C2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACDF6F270C933300D200C2 /* LoginVC.swift */; };
+		A3ACDF72270CA5B100D200C2 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3ACDF71270CA5B100D200C2 /* RegisterVC.swift */; };
+		A3E9732F270CADDD0092F33C /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E9732E270CADDD0092F33C /* SuccessVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		A3ACDF64270C694500D200C2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3ACDF67270C694500D200C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3ACDF69270C694500D200C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3ACDF6F270C933300D200C2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		A3ACDF71270CA5B100D200C2 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A3E9732E270CADDD0092F33C /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +65,10 @@
 				A3ACDF5B270C694300D200C2 /* AppDelegate.swift */,
 				A3ACDF5D270C694300D200C2 /* SceneDelegate.swift */,
 				A3ACDF5F270C694300D200C2 /* ViewController.swift */,
+				A3ACDF6F270C933300D200C2 /* LoginVC.swift */,
+				A3ACDF71270CA5B100D200C2 /* RegisterVC.swift */,
 				A3ACDF61270C694300D200C2 /* Main.storyboard */,
+				A3E9732E270CADDD0092F33C /* SuccessVC.swift */,
 				A3ACDF64270C694500D200C2 /* Assets.xcassets */,
 				A3ACDF66270C694500D200C2 /* LaunchScreen.storyboard */,
 				A3ACDF69270C694500D200C2 /* Info.plist */,
@@ -140,7 +149,10 @@
 			files = (
 				A3ACDF60270C694300D200C2 /* ViewController.swift in Sources */,
 				A3ACDF5C270C694300D200C2 /* AppDelegate.swift in Sources */,
+				A3ACDF70270C933300D200C2 /* LoginVC.swift in Sources */,
 				A3ACDF5E270C694300D200C2 /* SceneDelegate.swift in Sources */,
+				A3E9732F270CADDD0092F33C /* SuccessVC.swift in Sources */,
+				A3ACDF72270CA5B100D200C2 /* RegisterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
