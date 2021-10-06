@@ -21,6 +21,10 @@ class SuccessVC: UIViewController {
     }
     
 
+    @IBAction func clickExitBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

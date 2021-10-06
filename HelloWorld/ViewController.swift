@@ -16,11 +16,41 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var button: UIButton!
     
+    @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        updateUI()
+//        updateUI()
+        print(errorLabel.text)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "success",
+           let destination = segue.destination as? SuccessVC {
+            destination.text = "hi！登陆成功"
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if identifier == "success" {
+            let userName = userNameTextField.text ?? ""
+            if userName.isEmpty {
+                errorLabel.text = "请输入用户名"
+                return false
+            }
+            let passNum = passwordTextField.text ?? ""
+            if passNum.isEmpty {
+                errorLabel.text = "请输入密码"
+                return false
+            }
+            errorLabel.text = nil
+        }
+        return true
     }
 
 
