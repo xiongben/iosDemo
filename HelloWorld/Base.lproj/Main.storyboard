@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Fd4-yJ-Ynq">
-                                <rect key="frame" x="60" y="120" width="294" height="431"/>
+                                <rect key="frame" x="60" y="120" width="294" height="509"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2E-r0-xJ4">
                                         <rect key="frame" x="123" y="0.0" width="48" height="24"/>
@@ -82,6 +82,20 @@
                                             </button>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKn-BW-4v9">
+                                        <rect key="frame" x="72" y="461" width="150" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="1Ef-Bu-iKj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="图片页面">
+                                            <color key="titleColor" systemColor="systemPinkColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="TMz-Sf-nA0" kind="presentation" modalPresentationStyle="fullScreen" id="6KN-cL-D6G"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Hag-6B-SeL" secondAttribute="trailing" id="0QS-Z8-bK4"/>
@@ -288,12 +302,58 @@
             </objects>
             <point key="canvasLocation" x="1783" y="-643"/>
         </scene>
+        <!--ImageVC-->
+        <scene sceneID="THo-Or-Add">
+            <objects>
+                <viewController id="TMz-Sf-nA0" customClass="ImageVC" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mSM-Em-ImV" customClass="Ima">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1pd-1C-hne">
+                                <rect key="frame" x="44" y="209" width="303" height="341"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="love2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8E5-X1-0nX">
+                                        <rect key="frame" x="20" y="20" width="263" height="301"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="a0c-dz-8OO" appends="YES" id="ZvJ-FZ-xIB"/>
+                                        </connections>
+                                    </imageView>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="w2S-2E-i61"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="N9h-4R-BDE"/>
+                                <connections>
+                                    <outlet property="delegate" destination="TMz-Sf-nA0" id="qXM-89-STB"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Yyc-br-5Cf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="8E5-X1-0nX" id="TVs-wv-Zk1"/>
+                        <outlet property="scrollView" destination="1pd-1C-hne" id="obQ-Wz-STk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KMh-qC-rWb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="a0c-dz-8OO">
+                    <connections>
+                        <action selector="tapImageView:" destination="TMz-Sf-nA0" id="OeH-vp-Jad"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1742.0289855072465" y="849.77678571428567"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5T4-OG-OFG"/>
+        <segue reference="K5Q-5Z-uhM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="checkmark" catalog="system" width="128" height="114"/>
+        <image name="love2.jpg" width="954" height="1696"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
