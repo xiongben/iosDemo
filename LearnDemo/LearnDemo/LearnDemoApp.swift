@@ -1,0 +1,17 @@
+//
+//  LearnDemoApp.swift
+//  LearnDemo
+//
+//  Created by admin on 2022/6/12.
+//
+
+import SwiftUI
+
+@main
+struct LearnDemoApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+    }
+}
