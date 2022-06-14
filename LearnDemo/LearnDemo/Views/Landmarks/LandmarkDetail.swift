@@ -8,7 +8,12 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    @EnvironmentObject var modelData: ModelData
     var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
     
     var body: some View {
         ScrollView{
@@ -16,11 +21,12 @@ struct LandmarkDetail: View {
                 .frame(height: 300)
             CircleImage(image: landmark.image)
                 .offset(y:-100)
-            Divider()
             VStack(spacing: 1.0){
-                Text(landmark.name)
-                    .padding()
-                    .font(.title)
+                HStack {
+                    Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
                 HStack {
                             Text(landmark.park)
                             Spacer()
